@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+      <!-- LOADING SCREEN -->
+      <div id="loading-screen" class="loading-screen">
+        <div class="cube"><svg width="95" height="100" viewBox="0 0 122 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_26)">
+            <path d="M111.432 27.9179L69.1963 2.30417C64.1299 -0.768056 57.8675 -0.768056 52.8012 2.30417L10.5677 27.9179C9.21397 28.738 9.22161 30.7794 10.583 31.5893L61 61.5854L111.42 31.5893C112.781 30.7794 112.789 28.7405 111.432 27.9179ZM114.954 39.2495L65.0714 68.9257V125.754C65.0714 129.024 68.4787 131.063 71.1913 129.418L109.911 105.937C114.918 102.9 118 97.3196 118 91.2869V41.0903C118 39.4628 116.31 38.4421 114.954 39.2495ZM4 41.0903V91.2869C4 97.3222 7.08157 102.9 12.0894 105.937L50.8087 129.415C53.5238 131.061 56.9286 129.024 56.9286 125.752V68.9257L7.04594 39.2495C5.68964 38.4421 4 39.4628 4 41.0903Z" fill="#204A69"/>
+            <path d="M11.3449 29.2008L11.3456 29.2004L53.5789 3.58677C53.579 3.58676 53.579 3.58674 53.579 3.58673C58.1674 0.804408 63.8302 0.804425 68.4185 3.58675L110.654 29.2004C110.654 29.2004 110.654 29.2004 110.654 29.2004C110.834 29.3097 110.946 29.5066 110.945 29.753C110.944 29.9995 110.831 30.1938 110.653 30.3002L61 59.84L11.35 30.3002L11.3499 30.3002C11.1717 30.1941 11.0582 29.9993 11.0572 29.7514C11.0562 29.5033 11.1682 29.3079 11.3449 29.2008ZM115.721 40.5387L115.721 40.5384C115.887 40.4396 116.055 40.4468 116.21 40.5407C116.37 40.6372 116.5 40.8218 116.5 41.0903V91.2869C116.5 96.8145 113.676 101.9 109.133 104.654L109.133 104.655L70.4135 128.135L71.1913 129.418L70.4134 128.135C68.7924 129.119 66.5714 127.964 66.5714 125.754V69.7787L115.721 40.5387ZM6.27865 40.5384L6.27902 40.5387L55.4286 69.7787V125.752C55.4286 127.963 53.211 129.117 51.5865 128.133C51.5863 128.133 51.5862 128.133 51.5861 128.133L12.8672 104.654C8.32386 101.899 5.5 96.8169 5.5 91.2869V41.0903C5.5 40.8218 5.63035 40.6372 5.79011 40.5407C5.9454 40.4468 6.11268 40.4396 6.27865 40.5384Z" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_1_26" x="0" y="0" width="122" height="138" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_26"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_26" result="shape"/>
+            </filter>
+            </defs>
+            </svg></div>
+      </div>
+
+      <!-- LOGIN PAGE -->
+  <div class="container" id="container" style="display: none;">
+    <div class="card">
+      <!-- Icon -->
+      <div class="icon">
+        <svg width="95" height="100" viewBox="0 0 122 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_26)">
+            <path d="M111.432 27.9179L69.1963 2.30417C64.1299 -0.768056 57.8675 -0.768056 52.8012 2.30417L10.5677 27.9179C9.21397 28.738 9.22161 30.7794 10.583 31.5893L61 61.5854L111.42 31.5893C112.781 30.7794 112.789 28.7405 111.432 27.9179ZM114.954 39.2495L65.0714 68.9257V125.754C65.0714 129.024 68.4787 131.063 71.1913 129.418L109.911 105.937C114.918 102.9 118 97.3196 118 91.2869V41.0903C118 39.4628 116.31 38.4421 114.954 39.2495ZM4 41.0903V91.2869C4 97.3222 7.08157 102.9 12.0894 105.937L50.8087 129.415C53.5238 131.061 56.9286 129.024 56.9286 125.752V68.9257L7.04594 39.2495C5.68964 38.4421 4 39.4628 4 41.0903Z" fill="#204A69"/>
+            <path d="M11.3449 29.2008L11.3456 29.2004L53.5789 3.58677C53.579 3.58676 53.579 3.58674 53.579 3.58673C58.1674 0.804408 63.8302 0.804425 68.4185 3.58675L110.654 29.2004C110.654 29.2004 110.654 29.2004 110.654 29.2004C110.834 29.3097 110.946 29.5066 110.945 29.753C110.944 29.9995 110.831 30.1938 110.653 30.3002L61 59.84L11.35 30.3002L11.3499 30.3002C11.1717 30.1941 11.0582 29.9993 11.0572 29.7514C11.0562 29.5033 11.1682 29.3079 11.3449 29.2008ZM115.721 40.5387L115.721 40.5384C115.887 40.4396 116.055 40.4468 116.21 40.5407C116.37 40.6372 116.5 40.8218 116.5 41.0903V91.2869C116.5 96.8145 113.676 101.9 109.133 104.654L109.133 104.655L70.4135 128.135L71.1913 129.418L70.4134 128.135C68.7924 129.119 66.5714 127.964 66.5714 125.754V69.7787L115.721 40.5387ZM6.27865 40.5384L6.27902 40.5387L55.4286 69.7787V125.752C55.4286 127.963 53.211 129.117 51.5865 128.133C51.5863 128.133 51.5862 128.133 51.5861 128.133L12.8672 104.654C8.32386 101.899 5.5 96.8169 5.5 91.2869V41.0903C5.5 40.8218 5.63035 40.6372 5.79011 40.5407C5.9454 40.4468 6.11268 40.4396 6.27865 40.5384Z" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_1_26" x="0" y="0" width="122" height="138" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_26"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_26" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+      </div>
+
+      
+      <h3>Welcome back</h3>
+      <p>Please enter your details</p>
+
+      <!-- Login Form -->
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Continue</button>
+      </form>
+
+      <div class="OR"><span>OR</span></div>
+
+      <!-- Google Button -->
+      <button class="google-btn">
+        <img src="/icons8-google.svg" alt="">
+        Continue with Google
+      </button>
+
+      <!-- Footer -->
+      <p class="footer">
+        Don't have an account? <a href="sign-up.html">Sign up</a>
+      </p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
